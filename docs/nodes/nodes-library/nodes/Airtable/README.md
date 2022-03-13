@@ -135,6 +135,11 @@ To filter records from your Airtable base, use the ***Filter By Formula*** optio
 
 Similarly, if you want to return all the users that do not belong to the organization `n8n`, use the following formula: `NOT({Organization}='n8n')`.
 
+Another option, you can filter by two criteria by using the AND or OR formulas.
+For instance, this would only return results that included both "n8n" in the "organization" column and "New" in a column called "Indicator". 'AND({Organization}="n8n",{Indicator}="New")' 
+And this would return results that matched either "n8n" OR "ABC" in the organization column: 'AND({Organization}="n8n",({Organization}="ABC")'
+
+
 Refer to the Airtable [documentation](https://support.airtable.com/hc/en-us/articles/203255215-Formula-Field-Reference) to learn more about the formulas.
 
 
